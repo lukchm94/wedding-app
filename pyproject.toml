@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "wedding-app"
+version = "0.1.0"
+description = "Web app to show the wedding information"
+authors = ["Lukasz Ch <l.chmielewski@stuart.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.0"
+flask-sqlalchemy = "^3.1.1"
+pymysql = "^1.1.1"
+flask-migrate = "^4.0.7"
+python-dotenv = "^1.0.1"
+pydantic = "^2.10.4"
+cryptography = "^44.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

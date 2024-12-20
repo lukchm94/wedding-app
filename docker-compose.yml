@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  mysql_db:
+    image: mysql:8.0.35
+    container_name: mysql_db
+    environment:
+      MYSQL_USER: 'app_dev'
+      MYSQL_PASSWORD: 'app_dev'
+      MYSQL_DATABASE: 'app_dev'
+      MYSQL_ROOT_PASSWORD: 'app_dev'
+    ports:
+      - '3306:3306'
+    volumes:
+      - db-app-data:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - app_network
+
+
+volumes:
+  db-app-data:
+
+networks:
+  app_network:
